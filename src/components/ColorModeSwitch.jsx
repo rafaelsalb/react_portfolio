@@ -1,13 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
-export function ColorModeSwitch(props) {
-    let [mode, setMode] = useState("dark");
+export function ColorModeSwitch() {
+    let prevMode = String(window.localStorage.getItem('colorMode'));
+    let [mode, setMode] = useState(prevMode !== "undefined" && prevMode !== "null" ? prevMode : "dark");
+
+    useEffect(() => {
+        window.localStorage.setItem('colorMode', mode);
+        let page_root = document.querySelector("html");
+        page_root.attributes.getNamedItem("data-bs-theme").value = mode === "dark" ? "dark" : "light";
+    }, [mode]);
 
     function switchColorMode() {
-        let page_root = document.querySelector("html");
-        page_root.attributes.getNamedItem("data-bs-theme").value = mode === "dark" ? "light" : "dark";
-        setMode(page_root.attributes.getNamedItem("data-bs-theme").value);
+        setMode(mode === "dark" ? "light" : "dark");
     }
 
     return (

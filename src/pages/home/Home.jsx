@@ -1,8 +1,8 @@
 import { React } from 'react';
-import bubble_sort_thumbnail from '../assets/images/bubble_sort_thumbnail.png';
-import cache_mapping_thumbnail from '../assets/images/cache_mapping_thumbnail.png';
-import caesar_thumbnail from '../assets/images/caesar_thumbnail.png';
-import raycasting_thumbnail from '../assets/images/raycasting_thumbnail.png';
+import bubble_sort_thumbnail from '../../assets/images/bubble_sort_thumbnail.png';
+import cache_mapping_thumbnail from '../../assets/images/cache_mapping_thumbnail.png';
+import caesar_thumbnail from '../../assets/images/caesar_thumbnail.png';
+import raycasting_thumbnail from '../../assets/images/raycasting_thumbnail.png';
 
 
 export function Home(props) {
@@ -46,8 +46,7 @@ export function Home(props) {
                                     <div className="col-md-8">
                                         <div className="card-body">
                                             <h5 className="card-title">Bubble Sort Visualization</h5>
-                                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                                                content. This content is a little bit longer.</p>
+                                            <p className="card-text">A visualization of the basic sorting algorithm.</p>
                                         </div>
                                     </div>
                                 </div>
