@@ -9,12 +9,12 @@ function App(props) {
     'Donate': <Donate />
   }
 
-  let prevPage = String(window.localStorage.getItem('page'));
-  let [page, setPage] = useState(prevPage !== 'null' && prevPage !== 'undefined' ? prevPage : 'Home');
+  // let prevPage = String(window.localStorage.getItem('page'));
+  // let [page, setPage] = useState(prevPage !== 'null' && prevPage !== 'undefined' ? prevPage : 'Home');
 
   return (
     <>
-      <Navbar active={page}/>
+      <Navbar />
     </>
   )
 }
