@@ -4,7 +4,6 @@ import cache_mapping_thumbnail from '../../assets/images/cache_mapping_thumbnail
 import caesar_thumbnail from '../../assets/images/caesar_thumbnail.png';
 import raycasting_thumbnail from '../../assets/images/raycasting_thumbnail.png';
 
-
 export function Home(props) {
     let style = {
         maxWidth: 540
@@ -12,7 +11,7 @@ export function Home(props) {
 
     return (
         <>
-            <h1 className="text-center">Projects</h1>
+            <h1 className="text-center pt-4">Projects</h1>
             <div className="container text-center">
                 <div className="row g-2">
                     <div className="col-6">

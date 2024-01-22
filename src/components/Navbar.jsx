@@ -5,8 +5,6 @@ import ColorModeSwitch from './ColorModeSwitch.jsx';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Home } from '../pages/home/Home.jsx';
 import { Donate } from '../pages/donate/Donate.jsx';
-import { CacheMapping } from '../pages/cache_mapping/CacheMapping.jsx';
-
 
 export function Navbar(props) {
   const ROOT_URL = 'react_portfolio';
@@ -15,17 +13,13 @@ export function Navbar(props) {
     cursor: 'pointer',
   };
 
-  // console.log(props.active);
-  
-  // useEffect(() => {}, [props.active]);
-
   return (
     <>
       <Router>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
             <Link to={ROOT_URL} style={{ textDecoration: 'none' }}>
-              <a className="navbar-brand" style={brandStyle}>Rafael Albuquerque</a>
+              <span className="navbar-brand" style={brandStyle}>Rafael Albuquerque</span>
             </Link>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -44,7 +38,7 @@ export function Navbar(props) {
         <Routes>
           <Route exact path={ROOT_URL + "/"} element={<Home />}></Route>
           <Route exact path={ROOT_URL + "/donate"} element={<Donate />}></Route>
-          {/* <Route exact path={ROOT_URL + "/cache_mapping"} element={<CacheMapping />}></Route> */}
+           {/* <Route exact path={ROOT_URL + "/cache_mapping"} element={<CacheMapping />}></Route> */}
         </Routes>
       </Router>
 

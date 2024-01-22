@@ -1,19 +1,19 @@
 import { Link } from 'react-router-dom';
 
-export function NavbarItem(props) {
+export function NavbarBrand(props) {
     const LinkStyle = {
         textDecoration: 'none'
     }
 
     return (
         <>
-            <li className="nav-item">
+            <li className="navbar-brand">
                 <Link to={props.linkTo} className="link" style={LinkStyle}>
-                    <button type="button" className={"nav-link" + (props.active ? " active" : "")} aria-current="page">{props.text}</button>
+                    {props.text}
                 </Link>
             </li>
         </>
     );
 }
 
-export default NavbarItem;
+export default NavbarBrand;
